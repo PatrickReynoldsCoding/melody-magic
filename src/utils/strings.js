@@ -1,7 +1,7 @@
-const { stringsAndNotes } = require("./notes");
+import { stringsAndNotes } from "./notes";
 
 // Function to decide and return the string the note will be added to
-const findString = (note) => {
+export const findString = (note) => {
   const properties = [];
   for (const string in stringsAndNotes) {
     if (stringsAndNotes[string].includes(note)) {
@@ -10,8 +10,4 @@ const findString = (note) => {
   }
 
   return properties[0];
-};
-
-module.exports = {
-  findString,
 };

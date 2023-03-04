@@ -1,7 +1,7 @@
-const { findString } = require("./strings");
-const { stringsAndNotes } = require("./notes");
+import { findString } from "./strings";
+import { stringsAndNotes } from "./notes";
 
-const printFretboard = (notes) => {
+export const printFretboard = (notes) => {
   if (notes.length > 32) {
     const bars = [];
     let i, j;
@@ -19,7 +19,7 @@ const printFretboard = (notes) => {
   }
 };
 
-const addNoteToFretboard = (note, fretboard, beat) => {
+export const addNoteToFretboard = (note, fretboard, beat) => {
   const stringIndex = findString(note);
   // Get the correct guitar string based off the note and return a split copy
   let currentString = fretboard[stringIndex];
@@ -47,7 +47,7 @@ const addNoteToFretboard = (note, fretboard, beat) => {
   return fretboard;
 };
 
-const addAllNotesToFretboard = (notes) => {
+export const addAllNotesToFretboard = (notes) => {
   let fretboardTemplate = ["e |", "B |", "G |", "D |", "A |", "E |"];
   for (let i = 0, beat = 1; i < notes.length; i++) {
     let note = notes[i];
@@ -73,9 +73,3 @@ const addAllNotesToFretboard = (notes) => {
 // --NOTES FOR NEXT TIME:
 // cap off bar
 // code beat so its 3 if noteToAdd >=10
-
-module.exports = {
-  addNoteToFretboard,
-  addAllNotesToFretboard,
-  printFretboard,
-};
