@@ -14,7 +14,7 @@ export const printFretboard = (notes) => {
   } else {
     let fretboard = addAllNotesToFretboard(notes);
     for (let i = 0; i < fretboard.length; i++) {
-      console.log(fretboard[i] + "\n");
+      return fretboard[i] + "\n";
     }
   }
 };

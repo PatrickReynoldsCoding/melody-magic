@@ -8,36 +8,38 @@ export const Home = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    printFretboard([
-      0,
-      0,
-      2,
-      4,
-      0,
-      2,
-      4,
-      7,
-      7,
-      7,
-      6,
-      4,
-      2,
-      0,
-      "-",
-      0,
-      2,
-      4,
-      0,
-      2,
-      4,
-      7,
-      7,
-      7,
-      9,
-      7,
-      4,
-      2,
-    ]);
+    setCurrentTab(
+      printFretboard([
+        0,
+        0,
+        2,
+        4,
+        0,
+        2,
+        4,
+        7,
+        7,
+        7,
+        6,
+        4,
+        2,
+        0,
+        "-",
+        0,
+        2,
+        4,
+        0,
+        2,
+        4,
+        7,
+        7,
+        7,
+        9,
+        7,
+        4,
+        2,
+      ])
+    );
   };
 
   const handleInputChange = (event) => {
@@ -47,7 +49,7 @@ export const Home = () => {
 
   return (
     <div className="my-component-container">
-      <div className="tab-container">[]</div>
+      <div className="tab-container">{currentTab}</div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
