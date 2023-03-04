@@ -49,6 +49,7 @@ export const addNoteToFretboard = (note, fretboard, beat) => {
 
 export const addAllNotesToFretboard = (notes) => {
   let fretboardTemplate = ["e |", "B |", "G |", "D |", "A |", "E |"];
+  let fretboard = [];
   for (let i = 0, beat = 1; i < notes.length; i++) {
     let note = notes[i];
     if (note === "-") {
@@ -69,6 +70,37 @@ export const addAllNotesToFretboard = (notes) => {
   });
   return fretboard;
 };
+
+printFretboard([
+  0,
+  0,
+  2,
+  4,
+  0,
+  2,
+  4,
+  7,
+  7,
+  7,
+  6,
+  4,
+  2,
+  0,
+  "-",
+  0,
+  2,
+  4,
+  0,
+  2,
+  4,
+  7,
+  7,
+  7,
+  9,
+  7,
+  4,
+  2,
+]);
 
 // --NOTES FOR NEXT TIME:
 // cap off bar

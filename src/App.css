@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: #f2f2f2;
 }
 
 .tab-container {
@@ -17,7 +18,7 @@
 }
 
 .tab-item {
-  background-color: #f7d794;
+  background-color: #d7e0e9;
   color: #2c3e50;
   padding: 10px;
   margin: 5px;
@@ -27,7 +28,7 @@
 .about-section {
   margin-top: auto;
   padding: 20px;
-  background-color: #f3a683;
+  background-color: #f4acb7;
   color: #fff;
   text-align: center;
 }
@@ -44,11 +45,12 @@ input[type="text"] {
   margin-right: 10px;
   border-radius: 5px;
   border: none;
+  background-color: #fff;
 }
 
 button[type="submit"] {
   padding: 10px;
-  background-color: #f7d794;
+  background-color: #d7e0e9;
   color: #2c3e50;
   border-radius: 5px;
   border: none;
