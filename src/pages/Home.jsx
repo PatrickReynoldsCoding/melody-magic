@@ -8,8 +8,8 @@ export const Home = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setCurrentTab(
-      printFretboard([
+    while (true) {
+      const array = printFretboard([
         0,
         0,
         2,
@@ -38,8 +38,10 @@ export const Home = () => {
         7,
         4,
         2,
-      ])
-    );
+      ]);
+      if (!array.length) break;
+      setCurrentTab(array);
+    }
   };
 
   const handleInputChange = (event) => {
